@@ -2,29 +2,15 @@ package exam4;
 
 import java.util.Optional;
 
-public class Pec extends Budova{
-    public Pec(int riadok, int stlpec){
+public class Pec extends Budova {
 
+    public Pec(int riadok, int stlpec) {
+        super(riadok, stlpec);
     }
 
     @Override
     public void aktualizuj(HernySvet hernySvet) {
 
-    }
-
-    @Override
-    public void pridajSurovinuNaSklad(Surovina surovina) {
-
-    }
-
-    @Override
-    public void vyberSurovinuZoSkladu(Surovina surovina) {
-
-    }
-
-    @Override
-    public boolean jeNaPozicii(int riadok, int stlpec) {
-        return false;
     }
 
     @Override

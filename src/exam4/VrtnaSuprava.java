@@ -3,28 +3,15 @@ package exam4;
 import java.util.Optional;
 
 public class VrtnaSuprava extends Budova {
+    private Surovina surovina;
     public VrtnaSuprava(int riadok, int stlpec, Surovina surovina){
-
+        super(riadok, stlpec);
+        this.surovina = surovina;
     }
 
     @Override
     public void aktualizuj(HernySvet hernySvet) {
-        
-    }
 
-    @Override
-    public void pridajSurovinuNaSklad(Surovina surovina) {
-
-    }
-
-    @Override
-    public void vyberSurovinuZoSkladu(Surovina surovina) {
-
-    }
-
-    @Override
-    public boolean jeNaPozicii(int riadok, int stlpec) {
-        return false;
     }
 
     @Override
