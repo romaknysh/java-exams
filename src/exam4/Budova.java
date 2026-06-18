@@ -9,6 +9,7 @@ public abstract class Budova {
     private int stlpec;
     private List<Surovina> sklad;
     protected VyrobnyPlan aktualnyPlan;
+    protected HernySvet hernySvet;
 
     public Budova(int riadok, int stlpec) {
         this.riadok = riadok;
@@ -28,9 +29,11 @@ public abstract class Budova {
         return this.riadok == riadok && this.stlpec == stlpec;
     }
 
+    public int getRiadok() { return this.riadok; }
+    public int getStlpec() { return this.stlpec; }
+    public int getSkladSize() { return this.sklad.size(); }
+
     public abstract void aktualizuj(HernySvet hernySvet);
-
     protected abstract boolean ziskajSurovinuVOkolo(HernySvet hernySvet, Surovina surovina);
-
     protected abstract Optional<VyrobnyPlan> zacniProdukciu();
 }
