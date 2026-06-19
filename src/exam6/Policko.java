@@ -11,15 +11,17 @@ public class Policko {
 
     public Policko(int cisloPolicka){
         this.cisloPolicka = cisloPolicka;
-        this.reprezentacia = "  ";
+        this.reprezentacia = String.valueOf(this.cisloPolicka);
     }
 
     public String getReprezentacia(){
-        return this.reprezentacia;
+        if (this.reprezentacia.length() < 2){
+            return " " + this.reprezentacia;
+        } else return this.reprezentacia;
     }
 
     public int vykonaj(Autosalon okruh, int financieHraca){
-        return 1;
+        return financieHraca;
     }
 
     protected int getCisloPolicka(){

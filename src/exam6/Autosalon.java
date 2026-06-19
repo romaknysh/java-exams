@@ -5,7 +5,9 @@ public class Autosalon {
     private Policko policka[];
 
     public Autosalon(int rozmer){
-        this.rozmer = rozmer;
+        if (rozmer % 2 == 0){
+            this.rozmer = rozmer;
+        } else this.rozmer = rozmer+1;
         this.policka = new Policko[this.rozmer];
     }
 
@@ -21,7 +23,18 @@ public class Autosalon {
         return this.rozmer;
     }
 
-    public void vypis (int polickoHraca){
-        System.out.println(this.policka[polickoHraca]);
+    public void vypis(int polickoHraca) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < this.rozmer; i++) {
+            if (i == polickoHraca) {
+                sb.append("HH");
+            } else {
+                sb.append(this.policka[i].getReprezentacia());
+            }
+            if (i < this.rozmer - 1) {
+                sb.append(" ");
+            }
+        }
+        System.out.println(sb.toString());
     }
 }
